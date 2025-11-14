@@ -10,17 +10,26 @@ class Employee {
     public:
         Employee(std::string n, double s) 
             : name(n), salary(s) {} // constructor
-        virtual void displayInfo() = 0; // show the salary and name 
-        static void showTotalEmployees(); // no of employees getter
+
+        // show the salary and name 
+        virtual void displayInfo(); 
+
+        // no of employees getter
+        static void showTotalEmployees(){
+            std::cout << "Total Employees: " << employeeCount << std::endl; 
+        }
+
         virtual ~Employee(); 
 };
+
+
 
 class Staff : public Employee {
     private:
         std::string department; // dept of the employee
     public: 
         void displayInfo() {
-            // pass 
+            std::cout << "Name: " <<  name <<  " (Faculty) " << " Salary: " << salary;
         }
         
 };
@@ -28,13 +37,23 @@ class Staff : public Employee {
 class Faculty : public Employee {
     private:
         std::string department; // dept of the faculty
-    public: 
+    public:
+        // Faculty() {} 
         void displayInfo() {
-            // pass 
+            std::cout << "Name: " <<  name <<  " (Staff) " << " Salary: " << salary;
         }
         
 };
 
 int main() {
+    int n; // no of employees 
 
+    std::cout << ">>> "; 
+    std::cin >> n;
+
+    Employee *arr[n];
+
+    for (int i = 0; i < n; i++) {
+        
+    }
 }
