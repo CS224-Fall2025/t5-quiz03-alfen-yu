@@ -27,7 +27,7 @@ class Staff : public Employee {
     private:
         std::string department; // dept of the employee
     public: 
-        Faculty(std::string n, double salary, std::string dep) : Employee::Employee(n, s) {
+        Staff(std::string n, double s, std::string dep) : Employee::Employee(n, s) {
                 department = dep; 
             }
         void displayInfo() {
@@ -40,7 +40,7 @@ class Faculty : public Employee {
     private:
         std::string department; // dept of the faculty
     public:
-        Faculty(std::string n, double salary, std::string dep) : Employee::Employee(n, s) {
+        Faculty(std::string n, double s, std::string dep) : Employee::Employee(n, s) {
             department = dep; 
         } 
         void displayInfo() {
@@ -62,11 +62,11 @@ int main() {
         std::string dep = ""; 
         double num = 0; 
         std::cout << ">>> "; 
-        std::cin >> n >> dep >> n; 
+        std::cin >> n >> dep >> num; 
         if (n == "Staff") {
             arr[i] = new Staff(n, num dep); 
         } else if (n == "Faculty") {
-            arr[i] = new Faculty(n, num, dept);
+            arr[i] = new Faculty(n, num, dep);
         }
     }
 }
