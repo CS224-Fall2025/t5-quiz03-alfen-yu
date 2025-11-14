@@ -54,6 +54,15 @@ int main() {
     Employee *arr[n];
 
     for (int i = 0; i < n; i++) {
-        
+        std::string n = ""; 
+        std::string dep = ""; 
+        int num = 0; 
+        std::cout << ">>> "; 
+        std::cin >> n >> dep >> n; 
+        if (n == "Staff") {
+            arr[i] = new Staff(n, numm dep); 
+        } else if (n == "Faculty") {
+            arr[i] = new Faculty(n, num, dept);
+        }
     }
 }
