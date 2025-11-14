@@ -23,11 +23,13 @@ class Employee {
 };
 
 
-
 class Staff : public Employee {
     private:
         std::string department; // dept of the employee
     public: 
+        Faculty(std::string n, double salary, std::string dep) : Employee::Employee(n, s) {
+                department = dep; 
+            }
         void displayInfo() {
             std::cout << "Name: " <<  name <<  " (Faculty) " << " Salary: " << salary;
         }
@@ -38,7 +40,9 @@ class Faculty : public Employee {
     private:
         std::string department; // dept of the faculty
     public:
-        // Faculty() {} 
+        Faculty(std::string n, double salary, std::string dep) : Employee::Employee(n, s) {
+            department = dep; 
+        } 
         void displayInfo() {
             std::cout << "Name: " <<  name <<  " (Staff) " << " Salary: " << salary;
         }
@@ -56,11 +60,11 @@ int main() {
     for (int i = 0; i < n; i++) {
         std::string n = ""; 
         std::string dep = ""; 
-        int num = 0; 
+        double num = 0; 
         std::cout << ">>> "; 
         std::cin >> n >> dep >> n; 
         if (n == "Staff") {
-            arr[i] = new Staff(n, numm dep); 
+            arr[i] = new Staff(n, num dep); 
         } else if (n == "Faculty") {
             arr[i] = new Faculty(n, num, dept);
         }
